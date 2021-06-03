@@ -5,9 +5,87 @@
     <link rel="stylesheet" href="styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer src="https://kit.fontawesome.com/1dae407537.js" crossorigin="anonymous"></script>
-    <title>Reservia</title>
+    <title>Oh my food!</title>
 </head>
 
 <body> 
-    
+    <header>
+        <img src="images/logo/ohmyfood.png" alt="logo_ohmyfood">
+    </header>
+    <div id="accueil">
+        <div id="localisation">
+            <p><i class="fas fa-map-marker-alt" id="logo_lieu"></i>Paris, Belleville</p>
+        </div>
+        <div id="description">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            <button><a href="#restaurants">Explorer nos restaurants</a></button>
+        </div>
+    </div>
+    <section id="fonctionnement">
+        <h2>Fonctionnement</h2>
+        <ol id="etapes">
+            <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+            <li><i class="fas fa-list-ul"></i>Composez votre menu</li>
+            <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
+        </ol>
+    </section>
+    <main id="restaurants">
+        <h2>Restaurants</h2>
+        <article class="showcase">
+            <a href="palettegout.html">
+                <div class="bandeau_new">
+                    <p>Nouveau</p>
+                </div>
+                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La Palette du gout">
+                <div class="nom_prix_rating">
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                    <i class="far fa-heart"></i>
+                </div>
+            </a>
+        </article>
+        <article class="showcase">
+            <a href="noteenchantee.html">
+                <div class="bandeau_new">
+                    <p>Nouveau</p>
+                </div>
+                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                <div class="nom_prix_rating">
+                    <h3>La note enchantée</h3>
+                    <p>Charonne</p>
+                    <i class="far fa-heart"></i>
+                </div>
+            </a>
+        </article>
+        <article class="showcase">
+            <a href="alafrancaise.html">
+                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
+                <div class="nom_prix_rating">
+                    <h3>À la française</h3>
+                    <p>cité Rouge</p>
+                    <i class="far fa-heart"></i>
+                </div>
+            </a>
+        </article>
+        <article class="showcase">
+            <a href="palettegout.html">
+                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+                <div class="nom_prix_rating">
+                    <h3>Le délice des sens</h3>
+                    <p>Folie-Méricourt</p>
+                    <i class="far fa-heart"></i>
+                </div>
+            </a>
+        </article>
+    </main>
+    <footer>
+        <img src="images/logo/ohmyfood.png" alt="logo_ohmyfood" id="logo_footer">
+        <ul>
+            <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
 </body>
