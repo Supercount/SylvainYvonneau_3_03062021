@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/roboto/Roboto-Black.ttf") format("truetype"), url("../../fonts/roboto/Roboto-BlackItalic.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Bold.ttf") format("truetype"), url("../../fonts/roboto/Roboto-BoldItalic.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-Bold.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-BoldItalic.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-Italic.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-Light.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-LightItalic.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-Regular.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Italic.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Light.ttf") format("truetype"), url("../../fonts/roboto/Roboto-LightItalic.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Medium.ttf") format("truetype"), url("../../fonts/roboto/Roboto-MediumItalic.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Regular.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Thin.ttf") format("truetype"), url("../../fonts/roboto/Roboto-ThinItalic.ttf") format("truetype");
+  font-family: "Shrikhand";
+  src: url("../../fonts/shrikhand/Shrikhand-Regular.otf") format("opentype");
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nhc3MvYmFzZS9fcG9saWNlcy5zY3NzIiwiLi4vc3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0kscUJBQUE7RUFDQSxtdENBQUE7RUFrQkEsd0JBQUE7RUFDQSwwRUFBQTtBQ2hCSiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
