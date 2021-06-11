@@ -1,0 +1,19 @@
+@mixin plats {
+    max-width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: darken($gris-fond, 10) 5px 5px 5px;
+    margin-bottom: 15px;
+}
+
+@mixin coeur_menu {
+    font-size: 1.5em;
+    font-weight: normal;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}

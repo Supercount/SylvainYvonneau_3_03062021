@@ -1,7 +1,9 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./base/fonts";
 
-
+@import "./composants/boutons";
 @import "./layout/global";
 @import "./layout/header";
+@import "./layout/menus";
 @import "./layout/footer";

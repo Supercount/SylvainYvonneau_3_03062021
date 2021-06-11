@@ -1,0 +1,53 @@
+.menu {
+    background-color: $gris-fond;
+    border-radius: 25px 25px 0 0;
+    position: relative;
+    bottom: 40px;
+    padding-bottom: 50px;
+    &__titre {
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 1.8em;
+        margin-left: 2.5%;
+        margin-bottom: 0;
+        display: inline-block;
+    }
+    &__heart {
+        @include coeur_menu;
+    }
+    &__groupe {
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: normal;
+        margin-top: 50px;
+        margin-left: 2.5%;
+        &--underline{
+            text-decoration: underline $couleur-tertiaire 3px;
+            text-underline-offset: 8px;
+        }
+    }
+    &__plat {
+        @include plats;
+        cursor: pointer;
+        h3 {
+            width: 100%;
+            padding-left: 8px;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        p {
+            padding-left: 8px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .prix {
+            font-weight: bold;
+            padding-right: 15px;
+        }
+        .fas {
+            display: none;
+        }
+    }
+    &__bouton {
+        @extend %boutons;
+    }
+}
