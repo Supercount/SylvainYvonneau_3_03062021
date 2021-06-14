@@ -2,8 +2,12 @@
 @import "./utils/mixins";
 @import "./base/fonts";
 
+@import "./composants/titres";
 @import "./composants/boutons";
 @import "./layout/global";
 @import "./layout/header";
+@import "./pages/presentation";
+@import "./pages/fonctionnement";
+@import "./pages/restaurant";
 @import "./layout/menus";
 @import "./layout/footer";

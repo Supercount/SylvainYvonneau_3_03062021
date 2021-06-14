@@ -20,8 +20,10 @@
         font-weight: normal;
         margin-top: 50px;
         margin-left: 2.5%;
+        padding-top: 0;
         &--underline{
-            text-decoration: underline $couleur-tertiaire 3px;
+            text-decoration: underline $couleur-tertiaire;
+            text-decoration-thickness: 3px;
             text-underline-offset: 8px;
         }
     }
@@ -48,6 +50,6 @@
         }
     }
     &__bouton {
-        @extend %boutons;
+        @include boutons;
     }
 }

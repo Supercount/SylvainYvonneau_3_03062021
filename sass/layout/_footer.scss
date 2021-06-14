@@ -9,10 +9,11 @@
     }
     &__list {
         list-style-type: none;
+        margin: 0;
         position: relative;
         right: 20px;
         li {
-            margin-top: 5px;
+            margin-bottom: 5px;
         }
     }
     &__links {
