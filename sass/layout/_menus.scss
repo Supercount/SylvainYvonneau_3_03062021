@@ -2,11 +2,13 @@
     background-color: $gris-fond;
     border-radius: 25px 25px 0 0;
     position: relative;
-    bottom: 40px;
+    margin-top: -40px;
     padding-bottom: 50px;
     &__titre {
         font-family: 'Shrikhand', sans-serif;
         font-size: 1.8em;
+        padding-top: 30px;
+        margin-top: 0;
         margin-left: 2.5%;
         margin-bottom: 0;
         display: inline-block;
@@ -21,10 +23,15 @@
         margin-top: 50px;
         margin-left: 2.5%;
         padding-top: 0;
-        &--underline{
-            text-decoration: underline $couleur-tertiaire;
-            text-decoration-thickness: 3px;
-            text-underline-offset: 8px;
+        position: relative;
+        &::after{
+            content: "";
+            height: 3px;
+            width: 40px;
+            background-color: $couleur-tertiaire;
+            position: absolute;
+            left: 0;
+            bottom: -8px
         }
     }
     &__plat {
