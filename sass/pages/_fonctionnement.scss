@@ -1,11 +1,36 @@
 .fonctionnement {
-    max-width: 95%;
+    display: flex;
+    flex-direction: column;
     &__etape {
+        margin: auto;
+        width: 90%;
         background-color: $gris-fond;
         border-radius: 15px;
-        margin-top: 15px;
-        min-height: 50px;
+        margin-bottom: 20px;
+        min-height: 70px;
         box-shadow: darken($gris-fond,10) 5px 5px 10px;
-        // text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    &__nombre {
+        color: white;
+        background-color: $couleur-primaire;
+        border-radius: 200px;
+        padding: 2px 6px 2px 6px;
+        position: relative;
+        right: 10px;
+    }
+    &__icone {
+        color: darken($gris-fond,50);
+        padding-left: 15px;
+        width: 30px;
+    }
+    &__texte {
+        padding-left: 30px;
+        font-weight: bold;
+        flex: 1;
     }
 }
