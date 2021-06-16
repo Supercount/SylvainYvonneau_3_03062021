@@ -1,5 +1,8 @@
-h2 {
+.main_titre {
     margin-left: 5%;
-    padding-top: 30px;
+    padding-top: 25px;
     padding-bottom: 15px;
+    @include over-tablette {
+        width: 100%;
+    }
 }

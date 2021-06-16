@@ -14,4 +14,10 @@ a {
     width: 100%;
     height: 260px;
     object-fit: cover;
+    @include over-mobile {
+        height: 320px;
+    }
+    @include over-tablette {
+        height: 380px;
+    }
 }

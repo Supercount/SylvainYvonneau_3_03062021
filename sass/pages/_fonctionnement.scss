@@ -1,6 +1,11 @@
 .fonctionnement {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    @include over-tablette {
+        flex-direction: row;
+        justify-content: space-around;
+    }
     &__etape {
         margin: auto;
         width: 90%;
@@ -14,6 +19,16 @@
         justify-content: space-evenly;
         font-size: 1em;
         cursor: pointer;
+        @include over-tablette {
+            max-width: 30%;
+            margin-bottom: 30px;
+        }
+        &:hover {
+            background-color: lighten($couleur-primaire,35);
+            .fonctionnement__icone {
+                color: $couleur-primaire;
+            }
+        }
     }
     &__nombre {
         color: white;

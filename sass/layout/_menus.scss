@@ -16,6 +16,16 @@
     &__heart {
         @include coeur_menu;
     }
+    &__bloc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        @include over-ecran_large {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
     &__groupe {
         text-transform: uppercase;
         font-size: 1em;
@@ -24,6 +34,12 @@
         margin-left: 2.5%;
         padding-top: 0;
         position: relative;
+        @include over-tablette {
+            font-size: 1.3em;
+            &::after {
+                width: 60px;
+            }
+        }
         &::after{
             content: "";
             height: 3px;
@@ -31,12 +47,18 @@
             background-color: $couleur-tertiaire;
             position: absolute;
             left: 0;
-            bottom: -8px
+            bottom: -8px;
+            @include over-tablette {
+                width: 60px;
+            }
         }
     }
     &__plat {
         @include plats;
         cursor: pointer;
+        @include over-ecran_large {
+            max-width: 40%;
+        }
         h3 {
             width: 100%;
             padding-left: 8px;
