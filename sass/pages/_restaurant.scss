@@ -45,11 +45,22 @@
             margin-bottom: 0;
             padding-bottom: 15px;
         }
-        i {
+        .fa-heart {
             position: absolute;
             top: 5px;
             right: 25px;
             font-size: 1.6em;
+            transition: transform 500ms;
+            &:hover + .coeur_plein {
+                transform: scale(1);
+            }
+        }
+        .coeur_plein {
+            z-index: 1;
+            color: transparent;
+            background: $degrade-coeur;
+            background-clip: text;
+            transform: scale(0);
         }
     }
 }

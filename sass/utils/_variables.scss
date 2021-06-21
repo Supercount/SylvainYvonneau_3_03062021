@@ -4,4 +4,8 @@ $couleur-tertiaire: #99E2D0;
 
 $gris-fond: #f3f3f3;
 
+$degrade-bouton: linear-gradient(170deg,$couleur-secondaire, $couleur-primaire);
+$degrade-bouton-clair: linear-gradient(170deg,lighten($couleur-secondaire,10),lighten($couleur-primaire,10));
+$degrade-coeur: linear-gradient(20deg,$couleur-secondaire, $couleur-primaire);
+
 $breakpoints: (mobile : 576px, tablette: 768px, ecran:992px, ecran_large:1200px);

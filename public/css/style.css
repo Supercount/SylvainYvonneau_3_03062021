@@ -305,6 +305,8 @@ a {
   justify-content: space-evenly;
   font-size: 1em;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .fonctionnement__etape {
@@ -312,10 +314,24 @@ a {
     margin-bottom: 30px;
   }
 }
-.fonctionnement__etape:hover {
+.fonctionnement__etape::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 15px;
   background-color: #f2eafb;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 500ms;
+}
+.fonctionnement__etape:hover::after {
+  opacity: 1;
 }
 .fonctionnement__etape:hover .fonctionnement__icone {
+  transition: color 500ms;
   color: #9356DC;
 }
 .fonctionnement__nombre {
@@ -387,11 +403,22 @@ a {
   margin-bottom: 0;
   padding-bottom: 15px;
 }
-.showcase__descriptif i {
+.showcase__descriptif .fa-heart {
   position: absolute;
   top: 5px;
   right: 25px;
   font-size: 1.6em;
+  transition: transform 500ms;
+}
+.showcase__descriptif .fa-heart:hover + .coeur_plein {
+  transform: scale(1);
+}
+.showcase__descriptif .coeur_plein {
+  z-index: 1;
+  color: transparent;
+  background: linear-gradient(20deg, #FF79DA, #9356DC);
+  background-clip: text;
+  transform: scale(0);
 }
 
 .bandeau_new {

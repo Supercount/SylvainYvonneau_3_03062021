@@ -53,7 +53,7 @@
     height: 50px;
     width: $width;
     box-shadow: darken($gris-fond, 10) 5px 5px 5px;
-    background: linear-gradient(170deg,$couleur-secondaire, $couleur-primaire);
+    background: $degrade-bouton;
     border: none;
     border-radius: 25px;
     color: white;

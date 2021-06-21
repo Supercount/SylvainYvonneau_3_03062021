@@ -19,13 +19,31 @@
         justify-content: space-evenly;
         font-size: 1em;
         cursor: pointer;
+        position: relative;
+        z-index: 1;
         @include over-tablette {
             max-width: 30%;
             margin-bottom: 30px;
         }
-        &:hover {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 15px;
             background-color: lighten($couleur-primaire,35);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 500ms;
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
             .fonctionnement__icone {
+                transition: color 500ms;
                 color: $couleur-primaire;
             }
         }
