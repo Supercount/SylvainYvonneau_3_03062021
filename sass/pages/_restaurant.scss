@@ -50,17 +50,28 @@
             top: 5px;
             right: 25px;
             font-size: 1.6em;
-            transition: transform 500ms;
+            transition: all 500ms;
             &:hover + .coeur_plein {
                 transform: scale(1);
             }
+            &:hover + .coeur_vide {
+                transform: scale(0);
+            }
+        }
+        .coeur_vide {
+            z-index: 0;
+            transform: scale(1);
         }
         .coeur_plein {
             z-index: 1;
             color: transparent;
             background: $degrade-coeur;
             background-clip: text;
+            -webkit-background-clip: text;
             transform: scale(0);
+            &:hover {
+                transform: scale(1);
+            }
         }
     }
 }

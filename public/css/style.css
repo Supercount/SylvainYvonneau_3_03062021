@@ -92,6 +92,30 @@ a {
   position: absolute;
   top: 30px;
   right: 30px;
+  transition: all 500ms;
+}
+.menu__heart:hover + .coeur_plein {
+  transform: scale(1);
+}
+.menu__heart:hover + .coeur_vide {
+  transform: scale(0);
+}
+.menu .coeur_vide {
+  z-index: 0;
+  transform: scale(1);
+  cursor: pointer;
+}
+.menu .coeur_plein {
+  z-index: 1;
+  cursor: pointer;
+  color: transparent;
+  background: linear-gradient(20deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: scale(0);
+}
+.menu .coeur_plein:hover {
+  transform: scale(1);
 }
 .menu__bloc {
   width: 100%;
@@ -273,8 +297,11 @@ a {
   font-size: 1em;
   font-weight: bolder;
   cursor: pointer;
-  position: relative;
-  bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#presentation__bouton :hover {
+  color: blue;
 }
 
 .main_page {
@@ -408,9 +435,16 @@ a {
   top: 5px;
   right: 25px;
   font-size: 1.6em;
-  transition: transform 500ms;
+  transition: all 500ms;
 }
 .showcase__descriptif .fa-heart:hover + .coeur_plein {
+  transform: scale(1);
+}
+.showcase__descriptif .fa-heart:hover + .coeur_vide {
+  transform: scale(0);
+}
+.showcase__descriptif .coeur_vide {
+  z-index: 0;
   transform: scale(1);
 }
 .showcase__descriptif .coeur_plein {
@@ -418,7 +452,11 @@ a {
   color: transparent;
   background: linear-gradient(20deg, #FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   transform: scale(0);
+}
+.showcase__descriptif .coeur_plein:hover {
+  transform: scale(1);
 }
 
 .bandeau_new {

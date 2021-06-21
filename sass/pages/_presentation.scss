@@ -35,8 +35,11 @@
     }
     &__bouton {
         @include boutons(250px);
-        position: relative;
-        bottom: 30px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        :hover {
+            color: blue;
+        }
     }
 }
 
