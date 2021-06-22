@@ -80,6 +80,18 @@
     &__plat {
         @include plats;
         cursor: pointer;
+        &--entree {
+        animation: apparition_plats 1500ms;
+        animation-fill-mode: backwards;
+        }
+        &--viande {
+        animation: apparition_plats 1500ms 500ms;
+        animation-fill-mode: backwards;
+        }
+        &--dessert {
+        animation: apparition_plats 1500ms 1000ms;
+        animation-fill-mode: backwards;
+        }
         @include over-ecran_large {
             max-width: 40%;
         }

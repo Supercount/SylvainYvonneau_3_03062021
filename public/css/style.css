@@ -1,3 +1,12 @@
+@keyframes apparition_plats {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "Roboto";
   src: url("../../fonts/roboto/Roboto-Black.ttf") format("truetype"), url("../../fonts/roboto/Roboto-BlackItalic.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Bold.ttf") format("truetype"), url("../../fonts/roboto/Roboto-BoldItalic.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-Bold.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-BoldItalic.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-Italic.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-Light.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-LightItalic.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-Regular.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Italic.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Light.ttf") format("truetype"), url("../../fonts/roboto/Roboto-LightItalic.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Medium.ttf") format("truetype"), url("../../fonts/roboto/Roboto-MediumItalic.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Regular.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Thin.ttf") format("truetype"), url("../../fonts/roboto/Roboto-ThinItalic.ttf") format("truetype");
@@ -181,6 +190,18 @@ a {
     width: 30%;
     margin-top: 10px;
   }
+}
+.menu__plat--entree {
+  animation: apparition_plats 1500ms;
+  animation-fill-mode: backwards;
+}
+.menu__plat--viande {
+  animation: apparition_plats 1500ms 500ms;
+  animation-fill-mode: backwards;
+}
+.menu__plat--dessert {
+  animation: apparition_plats 1500ms 1000ms;
+  animation-fill-mode: backwards;
 }
 @media screen and (min-width: 1200px) {
   .menu__plat {
