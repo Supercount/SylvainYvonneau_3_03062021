@@ -1,0 +1,47 @@
+.loader {
+    background-color: $gris-fond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    animation: vanish 3300ms cubic-bezier(.93,.04,.9,.37) forwards;
+    &__anim {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        @include over-tablette {
+            width: 45%;
+        }
+        @include over-ecran {
+            width: 30%;
+        }
+        @include over-ecran_large {
+            width: 20%;
+        }
+        span{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+        }
+        span:nth-child(1){
+            background-color: $couleur-primaire;
+            animation: bounce 1s ease-in-out backwards 3;
+        }
+        
+        span:nth-child(2){
+            background-color: $couleur-secondaire;
+            animation: bounce 1s ease-in-out 0.33s backwards 3;
+        }
+        
+        span:nth-child(3){
+            background-color: $couleur-tertiaire;
+            animation: bounce 1s ease-in-out 0.66s backwards 3;
+        }
+    }
+}

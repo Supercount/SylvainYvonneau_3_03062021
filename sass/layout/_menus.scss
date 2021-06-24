@@ -100,15 +100,24 @@
             padding-left: 8px;
             margin-top: 10px;
             margin-bottom: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-        p {
-            padding-left: 8px;
+        &__ajout {
+            position: relative;
+            width: 100%;
             margin-top: 10px;
             margin-bottom: 10px;
-        }
-        .prix {
-            font-weight: bold;
-            padding-right: 15px;
+            &--texte {
+                overflow: hidden;
+                padding-left: 10px;
+                text-overflow: ellipsis;
+            }
+            &--prix {
+                font-weight: bold;
+                position: absolute;
+                right: 15px;
+            }
         }
         .fas {
             display: none;

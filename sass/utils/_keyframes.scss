@@ -4,8 +4,30 @@
         transform: translateY(50px);
     }
 
-
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes bounce{
+    0%, 75%, 100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    25%{
+        transform: translateY(-20px);
+    }
+    
+}
+
+@keyframes vanish {
+    0%, 80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
     }
 }
