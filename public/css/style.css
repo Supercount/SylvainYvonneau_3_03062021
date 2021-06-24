@@ -25,6 +25,32 @@
     visibility: hidden;
   }
 }
+@keyframes encoche_expansion {
+  0% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+  100% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 @font-face {
   font-family: "Roboto";
   src: url("../../fonts/roboto/Roboto-Black.ttf") format("truetype"), url("../../fonts/roboto/Roboto-BlackItalic.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Bold.ttf") format("truetype"), url("../../fonts/roboto/Roboto-BoldItalic.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-Bold.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-BoldItalic.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-Italic.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-Light.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-LightItalic.ttf") format("truetype"), url("../../fonts/roboto/RobotoCondensed-Regular.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Italic.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Light.ttf") format("truetype"), url("../../fonts/roboto/Roboto-LightItalic.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Medium.ttf") format("truetype"), url("../../fonts/roboto/Roboto-MediumItalic.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Regular.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Thin.ttf") format("truetype"), url("../../fonts/roboto/Roboto-ThinItalic.ttf") format("truetype");
@@ -196,7 +222,8 @@ a {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap;
   background-color: white;
   border-radius: 15px;
   box-shadow: #dadada 5px 5px 5px;
@@ -226,32 +253,51 @@ a {
     max-width: 40%;
   }
 }
-.menu__plat h3 {
-  width: 100%;
+.menu__plat:hover .menu__plat__encoche {
+  display: flex;
+  animation: encoche_expansion 500ms backwards;
+}
+.menu__plat:hover .fa-check-circle {
+  animation: spin 500ms;
+}
+.menu__plat:hover .menu__plat__prix {
+  animation: slide 500ms forwards;
+}
+.menu__plat__texte {
   padding-left: 8px;
-  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
+}
+.menu__plat__texte h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
   margin-bottom: 0;
-  overflow: hidden;
+}
+.menu__plat__texte p {
+  margin-top: 5px;
   text-overflow: ellipsis;
-}
-.menu__plat__ajout {
-  position: relative;
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.menu__plat__ajout--texte {
   overflow: hidden;
-  padding-left: 10px;
-  text-overflow: ellipsis;
 }
-.menu__plat__ajout--prix {
+.menu__plat__prix {
   font-weight: bold;
-  position: absolute;
-  right: 15px;
+  align-self: center;
+  margin-right: 10px;
+}
+.menu__plat__encoche {
+  background-color: #99E2D0;
+  min-height: 100%;
+  align-self: stretch;
+  width: 50px;
+  z-index: 2;
+  border-radius: 0 15px 15px 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 .menu__plat .fas {
-  display: none;
+  color: white;
+  font-size: 1.5em;
 }
 .menu__bouton {
   display: block;

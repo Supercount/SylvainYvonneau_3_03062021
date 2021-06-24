@@ -31,3 +31,35 @@
         visibility: hidden;
     }
 }
+
+@keyframes encoche_expansion {
+    0% {
+        transform-origin: right;
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform-origin: right;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}

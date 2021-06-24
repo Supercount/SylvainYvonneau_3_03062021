@@ -27,7 +27,8 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: nowrap;
     background-color: white;
     border-radius: 15px;
     box-shadow: darken($gris-fond, 10) 5px 5px 5px;

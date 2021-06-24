@@ -95,32 +95,51 @@
         @include over-ecran_large {
             max-width: 40%;
         }
-        h3 {
-            width: 100%;
-            padding-left: 8px;
-            margin-top: 10px;
-            margin-bottom: 0;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        &:hover .menu__plat__encoche {
+            display: flex;
+            animation: encoche_expansion 500ms backwards;
         }
-        &__ajout {
-            position: relative;
-            width: 100%;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            &--texte {
-                overflow: hidden;
-                padding-left: 10px;
+        &:hover .fa-check-circle {
+            animation: spin 500ms;
+        }
+        &:hover .menu__plat__prix {
+            animation: slide 500ms forwards;
+        }
+        &__texte {
+            padding-left: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            flex: 1;
+            h3 {
                 text-overflow: ellipsis;
+                overflow: hidden;
+                margin-bottom: 0;
             }
-            &--prix {
-                font-weight: bold;
-                position: absolute;
-                right: 15px;
+            p {
+                margin-top: 5px;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
+        }
+        &__prix {
+            font-weight: bold;
+            align-self: center;
+            margin-right: 10px;
+        }
+        &__encoche {
+            background-color: $couleur-tertiaire;
+            min-height: 100%;
+            align-self: stretch;
+            width: 50px;
+            z-index: 2;
+            border-radius: 0 15px 15px 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
         }
         .fas {
-            display: none;
+            color: white;
+            font-size: 1.5em;
         }
     }
     &__bouton {
