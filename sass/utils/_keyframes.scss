@@ -36,11 +36,43 @@
     0% {
         transform-origin: right;
         transform: scaleX(0);
+        display: none;
+        width: 50px;
+    }
+
+    1% {
+        display: flex;
     }
 
     100% {
         transform-origin: right;
         transform: scaleX(1);
+        display: flex;
+        width: 50px;
+    }
+}
+
+@keyframes encoche_retract {
+    0% {
+        transform-origin: right;
+        transform: scaleX(1);
+        width: 50px;
+        // display: flex;
+    }
+
+    99% {
+        transform-origin: right;
+        transform: scaleX(0);
+    //     display: flex;
+        width: 50px;
+    }
+
+    100% {
+        transform-origin: right;
+        transform: scaleX(0);
+        width: 0;
+        // display: flex;
+        // display: none;
     }
 }
 
@@ -54,12 +86,22 @@
     }
 }
 
-@keyframes slide {
+@keyframes slide-left {
     0% {
         transform: translateX(50px);
     }
 
     100% {
         transform: translateX(0px);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(50px);
     }
 }

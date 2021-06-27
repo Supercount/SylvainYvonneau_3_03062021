@@ -15,7 +15,7 @@
     }
     &__heart {
         @include coeur_menu;
-        transition: all 500ms;
+        transition: all 350ms;
         &:hover + .coeur_plein {
             transform: scale(1);
         }
@@ -81,15 +81,15 @@
         @include plats;
         cursor: pointer;
         &--entree {
-        animation: apparition_plats 1500ms;
+        animation: apparition_plats 1500ms 250ms;
         animation-fill-mode: backwards;
         }
         &--viande {
-        animation: apparition_plats 1500ms 500ms;
+        animation: apparition_plats 1500ms 750ms;
         animation-fill-mode: backwards;
         }
         &--dessert {
-        animation: apparition_plats 1500ms 1000ms;
+        animation: apparition_plats 1500ms 1250ms;
         animation-fill-mode: backwards;
         }
         @include over-ecran_large {
@@ -97,16 +97,23 @@
         }
         &:hover .menu__plat__encoche {
             display: flex;
-            animation: encoche_expansion 500ms backwards;
+            animation: encoche_expansion 500ms ease-in-out backwards;
         }
         &:hover .fa-check-circle {
-            animation: spin 500ms;
+            animation: spin 500ms ease-in-out;
         }
         &:hover .menu__plat__prix {
-            animation: slide 500ms forwards;
+            animation: slide-left 500ms ease-in-out;
+        }
+        .menu__plat__encoche {
+            animation: encoche_retract 500ms forwards;
+        }
+        .menu__plat__prix {
+            animation: slide-right 500ms ease-in-out;
         }
         &__texte {
             padding-left: 8px;
+            margin-right: 5px;
             white-space: nowrap;
             overflow: hidden;
             flex: 1;
@@ -133,7 +140,7 @@
             width: 50px;
             z-index: 2;
             border-radius: 0 15px 15px 0;
-            display: none;
+            display: flex;
             justify-content: center;
             align-items: center;
         }

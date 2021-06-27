@@ -29,10 +29,34 @@
   0% {
     transform-origin: right;
     transform: scaleX(0);
+    display: none;
+    width: 50px;
+  }
+  1% {
+    display: flex;
   }
   100% {
     transform-origin: right;
     transform: scaleX(1);
+    display: flex;
+    width: 50px;
+  }
+}
+@keyframes encoche_retract {
+  0% {
+    transform-origin: right;
+    transform: scaleX(1);
+    width: 50px;
+  }
+  99% {
+    transform-origin: right;
+    transform: scaleX(0);
+    width: 50px;
+  }
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+    width: 0;
   }
 }
 @keyframes spin {
@@ -43,12 +67,20 @@
     transform: rotate(0);
   }
 }
-@keyframes slide {
+@keyframes slide-left {
   0% {
     transform: translateX(50px);
   }
   100% {
     transform: translateX(0px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(50px);
   }
 }
 @font-face {
@@ -149,7 +181,7 @@ a {
   position: absolute;
   top: 30px;
   right: 30px;
-  transition: all 500ms;
+  transition: all 350ms;
 }
 .menu__heart:hover + .coeur_plein {
   transform: scale(1);
@@ -237,15 +269,15 @@ a {
   }
 }
 .menu__plat--entree {
-  animation: apparition_plats 1500ms;
+  animation: apparition_plats 1500ms 250ms;
   animation-fill-mode: backwards;
 }
 .menu__plat--viande {
-  animation: apparition_plats 1500ms 500ms;
+  animation: apparition_plats 1500ms 750ms;
   animation-fill-mode: backwards;
 }
 .menu__plat--dessert {
-  animation: apparition_plats 1500ms 1000ms;
+  animation: apparition_plats 1500ms 1250ms;
   animation-fill-mode: backwards;
 }
 @media screen and (min-width: 1200px) {
@@ -255,16 +287,23 @@ a {
 }
 .menu__plat:hover .menu__plat__encoche {
   display: flex;
-  animation: encoche_expansion 500ms backwards;
+  animation: encoche_expansion 500ms ease-in-out backwards;
 }
 .menu__plat:hover .fa-check-circle {
-  animation: spin 500ms;
+  animation: spin 500ms ease-in-out;
 }
 .menu__plat:hover .menu__plat__prix {
-  animation: slide 500ms forwards;
+  animation: slide-left 500ms ease-in-out;
+}
+.menu__plat .menu__plat__encoche {
+  animation: encoche_retract 500ms forwards;
+}
+.menu__plat .menu__plat__prix {
+  animation: slide-right 500ms ease-in-out;
 }
 .menu__plat__texte {
   padding-left: 8px;
+  margin-right: 5px;
   white-space: nowrap;
   overflow: hidden;
   flex: 1;
@@ -291,7 +330,7 @@ a {
   width: 50px;
   z-index: 2;
   border-radius: 0 15px 15px 0;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -593,7 +632,7 @@ a {
   top: 5px;
   right: 25px;
   font-size: 1.6em;
-  transition: all 500ms;
+  transition: all 350ms;
 }
 .showcase__descriptif .fa-heart:hover + .coeur_plein {
   transform: scale(1);
