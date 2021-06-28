@@ -57,13 +57,11 @@
         transform-origin: right;
         transform: scaleX(1);
         width: 50px;
-        // display: flex;
     }
 
     99% {
         transform-origin: right;
         transform: scaleX(0);
-    //     display: flex;
         width: 50px;
     }
 
@@ -71,8 +69,6 @@
         transform-origin: right;
         transform: scaleX(0);
         width: 0;
-        // display: flex;
-        // display: none;
     }
 }
 
