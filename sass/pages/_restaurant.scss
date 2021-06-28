@@ -7,13 +7,22 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        @include over-ecran_large {
+            width: 1140px;
+            margin: auto;
+        }
+    }
+    h2 {
+        @include over-ecran_large {
+            width: 1140px;
+            margin: auto;
+        }
     }
 }
 
 
 .showcase {
     width: 90%;
-    max-width: 500px;
     margin: auto;
     margin-top: 25px;
     background-color: white;

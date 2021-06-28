@@ -166,6 +166,12 @@ a {
   margin-top: -40px;
   padding-bottom: 50px;
 }
+@media screen and (min-width: 1200px) {
+  .menu {
+    width: 1140px;
+    margin: -40px auto 0;
+  }
+}
 .menu__titre {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.8em;
@@ -516,6 +522,12 @@ a {
     justify-content: space-around;
   }
 }
+@media screen and (min-width: 1200px) {
+  .fonctionnement {
+    margin: auto;
+    width: 1140px;
+  }
+}
 .fonctionnement__etape {
   margin: auto;
   width: 90%;
@@ -588,10 +600,21 @@ a {
   flex-wrap: wrap;
   justify-content: center;
 }
+@media screen and (min-width: 1200px) {
+  .restaurants__groupe {
+    width: 1140px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .restaurants h2 {
+    width: 1140px;
+    margin: auto;
+  }
+}
 
 .showcase {
   width: 90%;
-  max-width: 500px;
   margin: auto;
   margin-top: 25px;
   background-color: white;

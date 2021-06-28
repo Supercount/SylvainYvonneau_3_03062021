@@ -6,6 +6,10 @@
         flex-direction: row;
         justify-content: space-around;
     }
+    @include over-ecran_large {
+        margin: auto;
+        width: 1140px;
+    }
     &__etape {
         margin: auto;
         width: 90%;

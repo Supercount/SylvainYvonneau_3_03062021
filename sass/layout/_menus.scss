@@ -4,6 +4,10 @@
     position: relative;
     margin-top: -40px;
     padding-bottom: 50px;
+    @include over-ecran_large {
+        width: 1140px;
+        margin: -40px auto 0;
+    }
     &__titre {
         font-family: 'Shrikhand', sans-serif;
         font-size: 1.8em;
