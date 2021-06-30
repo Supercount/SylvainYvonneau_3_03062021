@@ -125,11 +125,13 @@
                 text-overflow: ellipsis;
                 overflow: hidden;
                 margin-bottom: 0;
+                font-size: 1em;
             }
             p {
                 margin-top: 5px;
                 text-overflow: ellipsis;
                 overflow: hidden;
+                font-size: 0.95em;
             }
         }
         &__prix {
