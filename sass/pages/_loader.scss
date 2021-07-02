@@ -9,7 +9,7 @@
     left: 0;
     bottom: 0;
     z-index: 2;
-    animation: vanish 3300ms cubic-bezier(.93,.04,.9,.37) forwards;
+    animation: vanish 3000ms cubic-bezier(.93,.04,.9,.37) forwards;
     &__anim {
         display: flex;
         justify-content: space-between;
