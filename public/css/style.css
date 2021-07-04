@@ -514,6 +514,7 @@ a {
 }
 
 .fonctionnement {
+  width: 98%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
