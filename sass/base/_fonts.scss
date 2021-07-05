@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Roboto';
-    src: url('../../fonts/roboto/Roboto-Black.ttf') format('truetype'),
+    src: url('../../fonts/roboto/Roboto-Regular.ttf') format('truetype'),
+    url('../../fonts/roboto/Roboto-Black.ttf') format('truetype'),
     url('../../fonts/roboto/Roboto-BlackItalic.ttf') format('truetype'),
     url('../../fonts/roboto/Roboto-Bold.ttf') format('truetype'),
     url('../../fonts/roboto/Roboto-BoldItalic.ttf') format('truetype'),
@@ -15,9 +16,11 @@
     url('../../fonts/roboto/Roboto-LightItalic.ttf') format('truetype'),
     url('../../fonts/roboto/Roboto-Medium.ttf') format('truetype'),
     url('../../fonts/roboto/Roboto-MediumItalic.ttf') format('truetype'),
-    url('../../fonts/roboto/Roboto-Regular.ttf') format('truetype'),
     url('../../fonts/roboto/Roboto-Thin.ttf') format('truetype'),
     url('../../fonts/roboto/Roboto-ThinItalic.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'Shrikhand';
     src: url('../../fonts/shrikhand/Shrikhand-Regular.otf') format('opentype');
 }
