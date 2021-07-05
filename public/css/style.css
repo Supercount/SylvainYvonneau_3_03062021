@@ -105,10 +105,10 @@ h2 {
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   width: 100%;
   min-height: 100%;
   margin: 0;
-  font-family: "Roboto", sans-serif;
 }
 
 a {
